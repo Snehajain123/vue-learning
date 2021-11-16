@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>11vue</title>
+<link rel="stylesheet" href="./style.css">
+<script src="https://unpkg.com/vue@next"></script>
+</head>
+<body>
+<div id="app">
+	<div class="cart">Cart({{ cart }})</div>
+	<product-display :premium="premium" @add-to-cart="updateCart"></product-display>
+</div>
+<script src="./main.js"></script>
+<script src="./components/productDisplay.js"></script>
+<script src="./components/ReviewForm.js"></script>
+<script src="./components/ReviewList.js"></script>
+<script>
+	const mountedApp = app.mount('#app')
+</script>
+</body>
+</html>

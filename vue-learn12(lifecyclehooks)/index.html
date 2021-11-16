@@ -1,0 +1,51 @@
+<!doctype html >
+<html>
+<head>
+<div id='div1' v-bind:title="div_title">
+{{hello_message}}
+</div>
+</head>
+
+<body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script>
+var v1 = new Vue({
+el: "#div1",
+data: {
+hello_message: "hello, there welcome to vuejs world",
+div_title: "this is my intro div",
+},
+beforeCreate: function(){ 
+console.warn('before create');
+},
+created: function(){ 
+console.warn('created');
+},
+beforeMount: function(){ 
+console.warn('before mount');
+},
+mounted: function(){ 
+console.warn('mounted');
+},
+beforeUpdate: function(){ 
+console.warn('before update');
+},
+updated: function(){ 
+console.warn('updated');
+},
+beforeDestroy: function(){ 
+console.warn('before destroy');
+},
+destroyed: function(){ 
+console.warn('destroyed');
+}
+});
+
+// to fire update
+v1.$data.hello_message = "welcome message";
+
+// this can be invoked to destroy the object, which will fire the destroy hook
+v1.$destroy();
+</script>
+</body>
+</html>

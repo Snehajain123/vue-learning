@@ -1,0 +1,22 @@
+.product-display {
+	background-color: purple;
+        height: 1000px
+}
+.product-container{
+  float: left;
+  width: 30%
+
+}
+.product-image {
+  float: left;
+        display: flex;
+        justify-content: left;
+        align-items: left;
+        margin: auto;
+        height: 400px
+}
+.product-info{
+  float: right;
+  background-color: white;
+  width: 30%
+}
